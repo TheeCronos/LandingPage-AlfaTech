@@ -31,6 +31,10 @@
     color: #fff;
 }
 
+.info a:hover {
+    color: #000;
+}
+
 .topo img {
     width: 80px;
     left: -15px;
@@ -48,18 +52,60 @@
 }
 
 /* ---------------------- Conteúdo ------------------------*/
+.conteudo {
+    position: relative;
+    padding: 100px 0px;
+    animation: aparecerLento 1500ms;
+}
 
-table {
-    max-width: 1024px;
+.conteudo table{
     margin: auto;
 }
 
-.conteudo {
-    padding: 100px 0px;
+.celula-escondida {
+    visibility: hidden;
+}
+
+.celula-cabeçalho {
+    text-align: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #f1f3f7;
+    border-right: 1px solid #f1f3f7;
+    background-color: #f1f3f7;
+}
+
+.celula-cabeçalho p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #a8a4a4;
+}
+
+.celula-cabeçalho h2 {
+    font-size: 36px;
+}
+
+table tbody td {
+    text-align: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #f1f3f7;
+    border-right: 1px solid #f1f3f7;
+}
+
+.primeira-celula {
+    background-color: #f1f3f7;
+    font-weight: 500;
+    text-align: left;
+}
+
+.marcador-azul {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background-color: #2f86d6;
+    border-radius: 100px;
 }
 
 /* ------------------------ Footer --------------------------*/
-
 
 .rodape {
     display: flex;
@@ -91,17 +137,57 @@ table {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    font-size: 17px;
+    font-size: 18px;
+}
+
+.contato a{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-image: url("../assets/whatsapp.png");
+    background-position: center;
+    background-size: cover;
+    background-color: #29A71A;
+    border-radius: 4px;
+    animation: aparecerRight 1000ms;
 }
 
 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 20px 0px;
+    padding: 10px 0px;
     text-align: center;
     font-size: 18px;
     background-color: #f6f6f6;
 }
 
-.footer span {
-    color: #2f86d6;
+.footer img {
+    width: 150px;
+    margin-top: 10px;
+}
+
+@keyframes aparecerLento{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerRight{
+    0%{
+        opacity: 0;
+        right: -1000px;
+    }
+
+    100%{
+        opacity: 1;
+        right: 0;
+    }
 }
